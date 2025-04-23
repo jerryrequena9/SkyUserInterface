@@ -3,6 +3,17 @@ body{
     padding: 0;
     }
 
+div{
+    font-family: "Poppins", sans-serif;
+}
+
+ #PageLogo{
+
+    background-color: black;
+    height: 10%;
+    text-align: center;
+ }   
+
 #menuContainer{
     color: rgb(255, 255, 255);
     background-color: rgb(56, 7, 163);
@@ -15,7 +26,6 @@ body{
    gap: 80px;
     text-align: center;
     font-size: 1.5rem;
-   outline: black double;
    
    
 
