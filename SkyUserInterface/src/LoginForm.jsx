@@ -5,7 +5,7 @@ import { useState } from "react";
 //     .then(response => response.json())
 //     .then(data => console.log(data))
 //     .catch(error => console.error('Error:', error));
-function LoginForm(){ 
+function LoginForm({setIsLoggedIn}){ 
 const [UserEmail,setEmail]=useState("");
 const [UserPassword,setPassword]=useState("");
 
@@ -30,16 +30,25 @@ let url="https://680fd18827f2fdac240f7ceb.mockapi.io/login?email="+UserEmail+"&"
 let options= {method: 'GET',headers: {'content-type':'application/json'},};
 if(UserEmail!='' && UserPassword!=''){
     fetch(url,options)
-    .then(res =>{if (res.ok) {return res.json();}})
+    .then(res =>{
+        if (res.ok) 
+            {
+                localStorage.setItem('isLoggedIn','true');
+                setIsLoggedIn(true);
+                return res.json();
+            }
+        else if(!res.ok)
+        {return  window.alert('User email or password are incorrect.');}
+    
+    })
       .then(data =>{
         console.log(data);
       })
       .catch(error => {
-    // handle error
-  })
-}
+        console.log(error)
+})}
 else{
-    window.alert('User email or password are incorrect.')
+    window.alert('User email or password are incorrect.');
 }
 }
 
