@@ -61,8 +61,26 @@
   gap: 1.5rem;
  margin-left: auto;
  margin-right: auto;
-  width: 70%;
+  width: 60%;
   justify-content: center;/* Centers the grid if not full width*/
   /* box-sizing: border-box; */
 }
 
+.pagination-buttons{
+
+  display: flex;
+  width: 65%;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+/* background-color: #333; */
+justify-content: center;
+}
+.pagination-info{
+  margin-top: auto;
+  margin-bottom: auto;
+color: white;
+  text-align: center;
+  width: 200px;
+
+}

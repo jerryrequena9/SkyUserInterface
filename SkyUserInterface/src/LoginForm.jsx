@@ -13,12 +13,12 @@ const [UserPassword,setPassword]=useState("");
 
 
 const handleEmailChange=(newEmail)=>{
-    console.log(newEmail);
+    // console.log(newEmail);
     setEmail(newEmail);
 }
 
 const handlePasswordChange=(newPassword)=>{
-    console.log(newPassword);
+    // console.log(newPassword);
     setPassword(newPassword);
 }
 
